@@ -58,22 +58,70 @@ A seção abaixo descreve a resolução do desafio.
 
 - Implementar pipeline utilizando o [GitHub CI/CD](https://github.com/resources/articles/devops/ci-cd)
 - Utilizar Docker para padronizar e isolar ambientes, bem como facilitar o processo integração com diversas ferramentas
+- Implantar Infraestrutura como Código (IAC) com Terraform
 - Criar testes de integração automatizados 
 - Utilizar ferramenta para monitoramento e logs e notificação de erros
-- Implantar Infraestrutura como Código (IAC)
 
 ### Plano de Implementação
 
+1. Fase 1 - Preparação:
+   - Configuração de ambiente de desenvolvimento
+   - Treinamento das equipes
+   - Documentação inicial
+
+2. Fase 2 - Implementação Básica:
+   - Criação de containers Docker
+   - Implementação do Terraform
+   - Implementação de testes automatizados
+
+3. Fase 3 - Expansão:
+   - Integração com ferramentas de monitoramento
+   - Implementação de análise de código
+   - Automação de deploys
+
 ## 3. Mensuração e Compartilhamento de Conhecimento (M e S de CALMS):
 
-### Métricas
+### Dados de desempenho esperado
 
-### Plano para Disseminação do Conhecimento
+| Métrica                     | Atual   | Meta      |
+| --------------------------- | ------- | --------- |
+| Tempo entre código e deploy | 2 dias  | < 4 horas |
+| Taxa de sucesso em deploys  | 80%     | > 95%     |
+| Nº de incidentes/semana     | 2       | < 0.5     |
+| MTTR                        | 4 horas | < 1 hora  |
+
+### Plano de Compartilhamento de Conhecimento
+
+- **Documentação:** Wiki interna com descrição dos processos, tutoriais e informações relevantes
+- **Sessões de Pair Programming:** Devs e Ops trabalhando juntos
+- **Retrospectivas Mensais:** Discussão de melhorias no processo
+- **Intensificar comunicação (síncrona e assíncrona)**: Toda tarefa realiza deve ser relatada e o processo deve ser resumido (em texto, audio ou video)
 
 ## 4. Três Maneiras
 
-#### 1. Acelerar o Fluxo
+### 1. Acelerar o Fluxo
 
-#### 2. Ampliar o Feedback
+- **Padronizar e Automatizar:** Eliminar etapas manuais no deploy.    
+- **Pipeline Unificado:** Integrar Dev, QA e Ops em um único fluxo.
 
-#### 3. Experimentar e Aprender
+### 2. Ampliar o Feedback
+
+- **Monitoramento em Tempo Real:** Alertas automáticos para falhas.
+- **ChatOps:** Integrar feedback via plataforma de comunicação (ex.: "Deploy falhou na etapa X").
+
+### 3. Experimentar e Aprender
+
+- **Postmortems sem Culpa:** Analisar falhas para melhorar processos.
+- **Hackathons Internos:** Testar novas ferramentas (ex.: migração gradual do legado Delphi).
+    
+
+## Resultados Esperados
+
+- Redução máxima no tempo de deploy.
+- Diminuição de incidentes em produção.
+- Equipes mais alinhadas e menos "silos".
+- Estabelecimento da cultura DevOps
+
+### Conclusão
+
+A implementação das práticas DevOps na Tech trará benefícios significativos em termos de eficiência, qualidade e colaboração. O plano proposto considera as particularidades da empresa, incluindo o sistema legado em Delphi, e propõe uma abordagem gradual e sustentável para a transformação digital.

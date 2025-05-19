@@ -1,0 +1,35 @@
+services:
+  mysql:
+    image: mysql:9
+    container_name: mysql-container
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: nest-template-db
+      MYSQL_USER: local_user
+      MYSQL_PASSWORD: local_password
+    networks:
+      - primeira-network
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  nest-template:
+    build: 
+      context: .
+    container_name: nest-template-container
+    ports:
+      - 3000:3000
+    depends_on:
+      - mysql
+    networks:
+      - primeira-network
+
+  networks:
+    primeira-network:
+      name: primeira-network
+      external: true
+      driver: bridge
+
+volumes:
+  mysql-data:

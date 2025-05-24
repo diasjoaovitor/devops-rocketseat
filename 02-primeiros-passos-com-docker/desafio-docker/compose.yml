@@ -1,0 +1,33 @@
+services:
+  mariadb:
+    image: mariadb:lts-ubi9
+    container_name: mariadb-container
+    restart: unless-stopped
+    volumes:
+      - data:/var/lib/mysql
+    env_file:
+      - .env
+    ports:
+      - '3306:3306'
+    networks:
+      - desafio-docker-network
+
+  desafio-docker:
+    build:
+      context: .
+    container_name: desafio-docker-container
+    env_file:
+      - .env
+    ports:
+      - 3000:3000
+    depends_on:
+      - mariadb
+    networks:
+      - desafio-docker-network
+
+networks:
+  desafio-docker-network:
+    driver: bridge
+
+volumes:
+  data:
